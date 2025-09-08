@@ -30,30 +30,68 @@
   @media (max-width: 768px) {
     body {
       background: url("background2.jpg") no-repeat center center;
-      background-size: cover;   /* ✅ الصورة تملى الشاشة */
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       min-height: 100vh;
     }
+  }
 
+  /* نسخة اللابتوب */
+  @media (min-width: 769px) {
     header {
       position: absolute;
-      top: 10%; /* العنوان في الحتة الصفرا */
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      width: 90%;
+      top: 5%;             
+      width: 100%;          /* يملى العرض */
+      text-align: center;   /* يخلي العنوان في النص */
     }
 
     header h1 {
       color: #000;
-      font-size: 22px;
+      font-size: 40px;
       font-weight: bold;
     }
 
     header h2 {
       color: #000;
-      font-size: 14px;
+      font-size: 22px;
+    }
+
+    /* زرار لقطات من شغلنا */
+    .work-container {
+      position: fixed;
+      bottom: 70px;    
+      left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .work-btn {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-size: 7px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
+
+    .work-btn:hover {
+      background-color: #ff9900;
+      transform: scale(1.05);
+    }
+
+    .watch-text {
+      color: #ffcc00;
+      font-size: 15px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #000;
     }
   }
 
@@ -134,6 +172,15 @@
       <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Map"> 
       Location
     </a>
+  </div>
+
+  <!-- زرار لقطات من شغلنا -->
+  <div class="work-container">
+    <a href="videos.html" class="work-btn">
+      <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Video Icon">
+      لقطات من شغلنا
+    </a>
+    <span class="watch-text">⬅ انقر للمشاهدة</span>
   </div>
 
   <!-- رقم الترخيص -->
