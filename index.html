@@ -18,53 +18,52 @@
     font-family: Arial, sans-serif;
   }
 
-  /* نسخة اللابتوب */
   body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
     background: url("background.jpg") no-repeat center center;
-    background-size: 100% 100%;  /* يخلي الصورة كاملة */
+    background-size: cover;
+    background-position: center;
     background-attachment: scroll;
-    background-color: #ffffff;
+    min-height: 100vh;
   }
 
   /* نسخة الموبايل */
   @media (max-width: 768px) {
     body {
       background: url("background2.jpg") no-repeat center center;
-      background-size: 100% 100%;  /* يخلي الصورة كاملة */
-      background-attachment: scroll;
-      background-color: #ffffff;
+      background-size: cover;   /* ✅ الصورة تملى الشاشة */
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    header {
+      position: absolute;
+      top: 10%; /* العنوان في الحتة الصفرا */
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 90%;
+    }
+
+    header h1 {
+      color: #000;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    header h2 {
+      color: #000;
+      font-size: 14px;
     }
   }
 
-  /* الهيدر */
-  header {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 90%;
-    background: none !important;
-  }
-
-  header h1 {
-    color: #000 !important;
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-shadow: none !important;
-  }
-
+  header h1,
   header h2 {
     color: #000 !important;
-    font-size: 18px;
     text-shadow: none !important;
   }
 
-  /* الأيقونات */
+  /* باقي الاستايلات */
   .icons {
     position: fixed;
     bottom: 20px;
@@ -96,85 +95,16 @@
     margin-right: 8px;
   }
 
-  /* زرار شغلنا */
-  .work-container {
-    position: fixed;
-    bottom: 70px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .work-btn {
-    background-color: #ffcc00;
-    color: #000;
-    padding: 6px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.5);
-    transition: 0.3s;
-  }
-
-  .work-btn img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .work-btn:hover {
-    background-color: #ff9900;
-    transform: scale(1.05);
-  }
-
-  .watch-text {
-    color: #ffcc00;
-    font-size: 13px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  /* الترخيص */
   .license {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     text-align: left;
     font-size: 14px;
     background: rgba(0,0,0,0.6);
     padding: 8px 12px;
     border-radius: 10px;
     color: white;
-  }
-
-  /* نسخة الموبايل */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 20px;
-    }
-    header h2 {
-      font-size: 14px;
-    }
-    .icons {
-      right: 10px;
-      bottom: 10px;
-      gap: 10px;
-    }
-    .icons a {
-      font-size: 12px;
-      padding: 6px 10px;
-    }
-    .work-container {
-      bottom: 60px;
-      left: 5px;
-    }
-    .watch-text {
-      font-size: 11px;
-    }
   }
 </style>
 </head>
@@ -206,16 +136,7 @@
     </a>
   </div>
 
-  <!-- زرار لقطات -->
-  <div class="work-container">
-    <a href="videos.html" class="work-btn">
-      <img src="https://cdn-icons-png.flaticon.com/512/727/727245.png" alt="Video Icon">
-      لقطات من شغلنا 
-    </a>
-    <span class="watch-text">⬅ انقر للمشاهدة</span>
-  </div>
-
-  <!-- الترخيص -->
+  <!-- رقم الترخيص -->
   <div class="license">
     رقم الترخيص: 2019/39411 <br>
     License No: 2019/39411
