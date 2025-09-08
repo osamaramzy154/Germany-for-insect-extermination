@@ -23,31 +23,64 @@
       font-family: Arial, sans-serif;
     }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000;
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-shadow: 1px 1px 4px #000;
+  /* الخلفية الأساسية: صورة الكمبيوتر */
+  background: url("background.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
 
-      background: 
-       linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
-       url("background.jpg") no-repeat center center;
-      background-size: cover; 
-      background-position: center;     /* الخلفية تتمدد عشان تغطي أي شاشة */
-      background-attachment: scroll; /* الغي fixed لأنه بيبوظ الموبايل */
-      min-height: 100vh;           /* خليها تتمدد مع المحتوى */
+  position: relative;
+  overflow: hidden;
+}
 
-      animation: gradientBG 12s ease infinite;
-    }
+/* طبقة الجradient المتحرك */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg,
+    rgba(255,154,158,0.6),
+    rgba(250,208,196,0.6),
+    rgba(161,140,209,0.6),
+    rgba(251,194,235,0.6));
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  z-index: -1; /* يخليها تحت المحتوى */
+}
 
+/* نسخة الموبايل */
+@media (max-width: 768px) {
+  body {
+    background: url("background2.jpg") no-repeat center center;
+    background-size: contain;   /* الصورة كاملة */
+    background-color: #000;     /* لو فيه فراغات */
+  }
+}
 
+/* حركة الألوان */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* حركة الألوان */
 @keyframes gradientBG {
   0% { background-position: 0% 50%, center; }
   50% { background-position: 100% 50%, center; }
   100% { background-position: 0% 50%, center; }
 }
+
   /* باقي الأكواد اللي عندك هنا */
 
    header {
