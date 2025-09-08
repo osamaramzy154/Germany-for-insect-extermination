@@ -183,6 +183,45 @@
     font-size: 12px;         /* نص "انقر للمشاهدة" أصغر */
   }
 }
+/* نسخة الموبايل - الخلفية */
+  @media (max-width: 768px) {
+    body {
+      background: url("background2.jpg") no-repeat center center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+    }
+  }
+
+  /* نسخة اللابتوب */
+  @media (min-width: 769px) {
+    /* ... كود اللابتوب ... */
+  }
+
+  /* نسخة الموبايل - الهيدر والعناوين */
+  @media (max-width: 768px) {
+    /* ... كود العنوان الصغير ... */
+  }
+
+  /* نسخة الموبايل - زرار لقطات من شغلنا */
+  @media (max-width: 768px) {
+    .work-btn {
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 5px;
+      gap: 4px;
+    }
+
+    .work-btn img {
+      width: 14px;
+      height: 14px;
+    }
+
+    .watch-text {
+      font-size: 11px;
+    }
+  }
 </style>
 </head>
 <body>
