@@ -14,7 +14,7 @@
 <meta name="keywords" content="شركة مبيدات حشرية, مكافحة الحشرات, إبادة الحشرات, مكافحة القوارض, شركة مكافحة الحشرات في الكويت, رش منازل, مكافحة الصراصير, مكافحة النمل, مكافحة الفئران">
 
 
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">
   <style>
     * {
       margin: 0;
@@ -24,36 +24,23 @@
     }
 
 body {
-  background: 
-   linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
-   url("background.jpg") no-repeat center center;
+  background: url("background.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
   min-height: 100vh;
-  animation: gradientBG 12s ease infinite;
 }
 
 /* نسخة الموبايل */
 @media (max-width: 768px) {
   body {
-    background: 
-     linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
-     url("background2.jpg") no-repeat center center;
+    background: url("background2.jpg") no-repeat center center;
     background-size: contain;   /* ✅ الصورة كاملة */
     background-repeat: no-repeat;
-    background-color: #000;     /* الخلفية لو فاضي */
+    background-color: #000;     /* الخلفية لو في فراغات */
     background-position: center center;
-    animation: gradientBG 12s ease infinite;
   }
 }
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%, center; }
-  50% { background-position: 100% 50%, center; }
-  100% { background-position: 0% 50%, center; }
-}
-  /* باقي الأكواد اللي عندك هنا */
 
    header {
   position: absolute;
@@ -203,18 +190,7 @@ header h2 {
 header {
   background: none !important;
 }
-/* شيل أي خلفية ملونة فوق وتحت */
-body {
-  background: none !important;
-  background-color: transparent !important;
-}
 
-/* لو فيه أي عناصر بتاخد مساحة فوق أو تحت */
-body::before,
-body::after {
-  display: none !important;
-  background: none !important;
-}
   </style>
 </head>
 <body>
@@ -245,8 +221,7 @@ body::after {
       Location
     </a>
   </div>
- <!-- زرار لقطات من شغلنا + الكومنت -->
-<!-- زرار لقطات من شغلنا + الكومنت -->
+
 <!-- زرار لقطات من شغلنا + الكومنت -->
 <div class="work-container">
   <a href="videos.html" class="work-btn">
