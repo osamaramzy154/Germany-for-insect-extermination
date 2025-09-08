@@ -35,9 +35,9 @@ body {
   background: 
     linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
     url("background.jpg") no-repeat center center;
-  background-size: 400% 400%, cover;
-  background-attachment: fixed;
-  height: 100vh;
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 100vh;
 
   animation: gradientBG 12s ease infinite;
 }
@@ -125,8 +125,7 @@ header h2 {
   left: 0px;      /* في الركن الشمال */
   display: flex;
   align-items: center;
-  gap: 8px;
-  max-width: 250px;   /* أقصى عرض */
+  gap: 8px;  /* أقصى عرض */
 }
 
 .work-btn {
@@ -179,8 +178,6 @@ header h2 {
   .work-container {
     bottom: 60px;
     left: 5px;
-    flex-direction: column;
-    align-items: flex-start;
   }
   .watch-text {
     font-size: 11px;
