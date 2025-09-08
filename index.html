@@ -203,6 +203,18 @@ header h2 {
 header {
   background: none !important;
 }
+/* شيل أي خلفية ملونة فوق وتحت */
+body {
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* لو فيه أي عناصر بتاخد مساحة فوق أو تحت */
+body::before,
+body::after {
+  display: none !important;
+  background: none !important;
+}
   </style>
 </head>
 <body>
