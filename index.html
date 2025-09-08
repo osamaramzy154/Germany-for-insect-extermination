@@ -24,23 +24,23 @@
     }
 
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-shadow: 1px 1px 4px #000;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
 
-  /* صورة + ألوان متحركة */
-  background: 
-    linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
-    url("background.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
-  min-height: 100vh;
+      background: 
+       linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
+       url("background.jpg") no-repeat center center;
+      background-size: cover;      /* الخلفية تتمدد عشان تغطي أي شاشة */
+      background-attachment: scroll; /* الغي fixed لأنه بيبوظ الموبايل */
+      min-height: 100vh;           /* خليها تتمدد مع المحتوى */
 
-  animation: gradientBG 12s ease infinite;
-}
+      animation: gradientBG 12s ease infinite;
+    }
+
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%, center; }
