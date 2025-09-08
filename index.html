@@ -58,12 +58,22 @@ body::before {
   z-index: -1; /* يخليها تحت المحتوى */
 }
 
-/* نسخة الموبايل */
 @media (max-width: 768px) {
   body {
     background: url("background2.jpg") no-repeat center center;
     background-size: contain;   /* الصورة كاملة */
     background-color: #000;     /* لو فيه فراغات */
+  }
+
+  /* تعديل الهيدر في نسخة الموبايل */
+  header {
+    background: none !important;  /* يشيل المربع الأحمر */
+  }
+
+  header h1, 
+  header h2 {
+    color: #000 !important;   /* النص بالأسود */
+    text-shadow: 1px 1px 3px #fff; /* (اختياري) يدي وضوح لو الصورة فاتحة */
   }
 }
 
@@ -217,22 +227,6 @@ header h2 {
     font-size: 11px;
   }
 }
-@media (max-width: 768px) {
-  header {
-    background-color: rgba(255, 0, 0, 0.8); /* أحمر شفاف للموبايل */
-    padding: 15px;
-    border-radius: 5px;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    background-color: #ff4d4d; /* نفس درجة الأحمر اللي تحت */
-    padding: 15px;
-    border-radius: 5px;
-    display: inline-block;
-  }
-}
-
 
   </style>
 </head>
