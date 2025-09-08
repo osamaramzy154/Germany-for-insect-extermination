@@ -6,6 +6,7 @@
 
 
 <title>شركة مبيدات حشرية في الكويت | الالمانية المتحدة لمكافحة الحشرات والقوارض</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <meta name="description" content="الالمانية المتحدة - أفضل شركة مبيدات حشرية في الكويت. متخصصون في مكافحة الحشرات والقوارض مع ضمان فعالية وسرعة الخدمة. اتصل بنا الآن للتخلص من الحشرات بشكل نهائي.">
@@ -25,19 +26,28 @@
 
 
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+
+  /* صورة + ألوان متحركة */
   background: 
     linear-gradient(-45deg, rgba(255,154,158,0.6), rgba(250,208,196,0.6), rgba(161,140,209,0.6), rgba(251,194,235,0.6)), 
-    url("background.jpg") no-repeat center center;  /* هنا تحط اسم الصورة */
-  background-size: cover;
-  background-attachment: fixed;  /* تخلي الصورة ثابتة عند السحب */
-  color: white;
-  font-family: Arial, sans-serif;
-  text-shadow: 1px 1px 4px #000;
+    url("background.jpg") no-repeat center center;
+  background-size: 400% 400%, cover;
+  background-attachment: fixed;
   height: 100vh;
-  margin: 0;
-  position: relative;
+
+  animation: gradientBG 12s ease infinite;
 }
 
+@keyframes gradientBG {
+  0% { background-position: 0% 50%, center; }
+  50% { background-position: 100% 50%, center; }
+  100% { background-position: 0% 50%, center; }
+}
   /* باقي الأكواد اللي عندك هنا */
 
    header {
@@ -105,10 +115,11 @@ header h2 {
       border-radius: 10px;
     }
     /* الزرار لما الماوس يقف عليه */
-     a:hover {
-      background-color: #222;
-      transform: scale(1.05);
-    }
+.work-btn:hover, 
+.icons a:hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
     .work-container {
   position: fixed;
   bottom: 70px;    /* ارفعه فوق شوية عن تحت */
@@ -149,6 +160,32 @@ header h2 {
   font-size: 13px;
   font-weight: bold;
   text-shadow: 1px 1px 2px #000;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header h2 {
+    font-size: 14px;
+  }
+  .icons {
+    right: 10px;
+    bottom: 10px;
+    gap: 10px;
+  }
+  .icons a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .work-container {
+    bottom: 60px;
+    left: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .watch-text {
+    font-size: 11px;
+  }
 }
   </style>
 </head>
